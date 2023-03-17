@@ -7,6 +7,11 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<script src="./script.js" defer></script>
 	<title>Sign Up Form</title>
 </head>
 <body>
@@ -21,28 +26,31 @@
 	</div>
 	<div id="actionform">
 		<div id="promo">
-			<div>This is <em>NOT</em> a real online service! You know you <em>NEED</em> something like this in your life to help you <em>REALIZE</em> your deepest dreams. 
+			<div>This is <em>NOT</em> a real online service! You know you <em>NEED</em> something like this in your life to help you <em>REALIZE</em> your deepest dreams.</div>
 			<div>Sign up <em>NOW</em> to get started.</div>
 			<div>You <em>KNOW</em> you want to.</div>
-			</div>
 		</div>
 		<div id="newup">
-			<form action="">
+			<form onsubmit="return checkPasswords()">
 				<div>
-					<label for="first"><input type="text" id="first" name="first"></label>
-					<label for="second"><input type="text" id="second" name="second"></label>
+					<label for="first">FIRST NAME<input type="text" id="first" name="first" required></label>
+					<label for="second">LAST NAME<input type="text" id="second" name="second" required></label>
 				</div>
 				<div>
-					<label for="mail"><input type="email" id="mail" name="mail"></label>
-					<label for="phone"><input type="tel" id="phone" name="phone"></label>
+					<label for="mail">EMAIL<input type="email" id="mail" name="mail" required></label>
+					<label for="phone">PHONE NUMBER<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="123-456-7890" required></label>
 				</div>
 				<div>
-					<label for="passone"><input type="password" id="passone" name="passone"></label>
-					<label for="passtwo"><input type="password" id="passtwo" name="passtwo"></label>
+					<label for="passone">PASSWORD<input type="password" id="passone" name="passone" class="error" required></label>
+					<label for="passtwo">CONFIRM PASSWORD<input type="password" id="passtwo" name="passtwo" class="error" required></label>
 				</div>
+				<div id="match">* Passwords do not match</div>
+				<div><button type="submit">Create Account</button></div>
 			</form>
 		</div>
-		<div id="login"></div>
+		<div id="login">
+			Already have an account? <a href="#">Log in</a>
+		</div>
 	</div>
 </body>
 </html>

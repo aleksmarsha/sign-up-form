@@ -1,6 +1,11 @@
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -11,7 +16,7 @@ body {
 	background-image: url('./img/shrooms.jpg');
 	background-size: cover;
 	min-height: 100vh;
-	width: 30vw;
+	flex-grow: 1;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-direction: column;
@@ -30,7 +35,7 @@ body {
 }
 
 #logo img {
-	height: 19vh;
+	height: 10rem;
 	width: auto;
 }
 
@@ -48,9 +53,87 @@ body {
 	color: white;
 }
 
-#actionform {
+#promo {
 	padding-left: 2rem;
-	padding-right: 50vh;
-	padding-top: 10vh;
+	padding-right: 15rem;
+	padding-top: 3rem;
 	font-weight: 900;
+	line-height: 1.5rem;
 }
+
+label {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Crete Round', serif;
+}
+
+form div {
+	display: flex;
+	gap: 2rem;
+	margin: 2rem;
+}
+
+input {
+	border: 1px solid hsla(220, 2%, 52%, 0.7);
+	border-radius: 5px;
+	height: 2rem;
+}
+
+input:focus {
+	box-shadow: 1px 1px 5px black;
+	border: 1px solid hsla(236, 90%, 43%, 1);
+	outline: none;
+}
+
+#actionform {
+	flex-grow: 5;
+}
+
+#promo div {
+	min-width: 37rem;
+}
+
+#promo div:nth-child(3) {
+	margin-top: 1rem;
+}
+
+.error {
+	border: 1px solid hsla(6, 87%, 38%, 0.79);
+}
+
+#match {
+	color: red;
+	font-weight: 700;
+	font-size: 0.9rem;
+}
+
+button {
+	background-color: hsla(171, 100%, 43%, 1);
+	color: white;
+	border: none;
+	padding: 1rem;
+	font-size: 1.1rem;
+	font-weight: 800;
+	border-radius: 1rem;
+}
+
+button:hover {
+	background-color: hsla(190, 100%, 42%, 0.87);
+	outline: 1px solid hsla(266, 100%, 47%, 0.2);
+}
+
+button:active {
+	background-color: hsla(209, 100%, 46%, 1);
+	outline: 2px solid hsla(266, 100%, 47%, 0.2);
+}
+
+#login {
+	padding-left: 2rem;
+}
+
+#login a {
+	color: hsla(171, 100%, 43%, 1);
+	font-weight: 700;
+	text-decoration: none;
+}
+
